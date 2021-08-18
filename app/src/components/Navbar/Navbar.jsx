@@ -5,16 +5,17 @@ import './Navbar.css'
 
 function Navbar() {
     return (
+
         <nav className="navBarItems">
         <a href="/"> 
-            <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> Generic E-commerce</h1>
+            <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> E-commerce</h1>
         </a>
         <div className="menuIcon">
             <i className='fas fa-times'></i>
         </div>
         
         <ul className= 'nav-menu'>
-            {MenuItems.map((item,index)=> {
+            {MenuItems.map((item, index )=> {
                 let navBarResult;
 
                 if (index == "2" ) {
@@ -43,6 +44,8 @@ function Navbar() {
 }
 
 export default Navbar
+
+
 
 
 
