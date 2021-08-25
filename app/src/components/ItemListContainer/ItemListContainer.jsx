@@ -1,10 +1,15 @@
-import React from 'react'
 
-function ItemListContainer({saludar}) {
+import React from 'react'
+import ItemList from '../ItemList/ItemList'
+
+function ItemListContainer() {
+
+
+    
     return (
         <div>
 
-            <h1>  {saludar}  </h1>
+            <ItemList />
 
             
         </div>
@@ -12,3 +17,6 @@ function ItemListContainer({saludar}) {
 }
 
 export default ItemListContainer
+
+
+
