@@ -5,15 +5,6 @@ import ButtonCounter from '../buttonCounter/ButtonCounter';
 
 function Item() {
 
-    let stock = 8
-
-
-    
-    const onAdd = (quantity) => {
-
-        console.log(quantity)
-
-    } 
 
   
     
@@ -23,7 +14,7 @@ function Item() {
         <div >
 
            
-           <ButtonCounter  onAdd={onAdd} stock={stock} />
+
 
 
                         

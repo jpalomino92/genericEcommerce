@@ -5,9 +5,9 @@ import './ButtonCounter.css'
 
 
 
-export default function ButtonCounter ({onAdd,stock}) {
+export default function ButtonCounter ({onAdd,stock,initial}) {
 
-  const [quantity,setQuantity] = useState(0);
+  const [quantity,setQuantity] = useState(initial);
 
   const handleIncrement = function(){
       if (quantity > parseInt(stock)) {
