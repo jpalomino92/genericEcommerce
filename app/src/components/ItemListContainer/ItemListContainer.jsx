@@ -1,36 +1,30 @@
-
-import React from 'react'
-import ItemList from '../ItemList/ItemList'
-import ButtonCounter from '../buttonCounter/ButtonCounter'
-
-function ItemListContainer() {
+import {React,useState, useEffect } from 'react';
+import './ItemListContainer.css';
+import ItemList from '../ItemList/ItemList';
 
 
-    let stock = 15
-    const initial = 1 
+
+export default function ItemListContainer () {
+
+    const [items,setItems] = useState([]);
 
 
-    
-    const onAdd = (quantity) => {
+    useEffect(() => {
+        
 
-        console.log(quantity)
-
-    } 
-
-
-    
-    return (
-        <div>
+        fetch('https://fakestoreapi.com/products?limit=15')
+            .then(res=>res.json())
+            .then(items=>setItems(items))
 
  
-            <ButtonCounter onAdd={onAdd} stock = {stock} initial = {initial}/>
-
             
-        </div>
+      },[]);
+ 
+    return (
+            <div id = 'ItemListContainer'>
+                <ItemList items={items}  />
+            </div>
+
+
     )
 }
-
-export default ItemListContainer
-
-
-
