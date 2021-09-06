@@ -1,6 +1,6 @@
 import {React} from 'react';
 import {Grid} from 'semantic-ui-react';
-import Item from '../Item/Item';
+import Item from '../Item/item';
 
 
 

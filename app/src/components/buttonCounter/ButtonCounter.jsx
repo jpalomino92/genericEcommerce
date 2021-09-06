@@ -1,6 +1,6 @@
 import {React,useState } from 'react';
 import { Button ,Icon} from 'semantic-ui-react';
-import './ButtonCounter.css'
+import './buttonCounter.css'
 
 
 
@@ -49,3 +49,8 @@ export default function ButtonCounter ({onAdd,stock,initial}) {
     </div>
   )
 }
+
+
+
+
+

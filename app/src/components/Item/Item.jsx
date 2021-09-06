@@ -1,6 +1,8 @@
 import React ,{useState,useContext}from 'react'; 
+import { Link } from 'react-router-dom';
 import {Card} from 'semantic-ui-react';
-import ButtonCounter from '../buttonCounter/ButtonCounter';
+import ButtonCounter from '../buttonCounter/buttonCounter';
+import { CartContext } from '../../context/cartContext';
 
 
 

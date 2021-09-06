@@ -1,8 +1,8 @@
-#title {
-	margin-top: 2%;
-	text-align: center;
-	width: 100%;
-	font-size: 3rem;
+#title{
+    margin-top: 2%;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
 }
 
 /*
@@ -16,6 +16,6 @@
     grid-row-gap: 2rem;
 }*/
 
-.column {
-	height: 1vp;
+.column{
+    height: 1vp;
 }

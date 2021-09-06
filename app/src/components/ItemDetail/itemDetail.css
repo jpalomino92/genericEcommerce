@@ -1,0 +1,35 @@
+.itemDetailImage{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.ItemGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .imageContainer { 
+        grid-area: 1 / 2 / 5 / 4;;
+
+    }
+    .descriptionContainer { 
+        grid-area: 2 / 4 / 4 / 7; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+    .buttonContainer { 
+        grid-area: 4 / 4 / 5 / 7; 
+        display: flex;
+        justify-content: center;
+    }
+    .itemDetailTitle{
+        display: flex;
+        justify-content: center;
+    }

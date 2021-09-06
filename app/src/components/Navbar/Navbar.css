@@ -1,54 +1,54 @@
 .navBarItems {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%);
-	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.2rem;
-	color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
 }
 
-.navBarLogo {
-	color: white;
-	justify-content: start;
-	margin-left: 20px;
-	cursor: pointer;
-	font-size: 2rem;
+.navBarLogo{
+    color: white;
+    justify-content: start;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
-.fa-biohazard {
-	margin-left: 0.5rem;
-	font-size: 1.6rem;
+.fa-biohazard{
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+
 }
-.nav-menu {
-	display: grid;
-	grid-template-columns: repeat(5, auto);
-	grid-gap: 10px;
-	list-style: none;
-	text-align: center;
-	width: 70vw;
-	justify-content: end;
-	margin-right: 2rem;
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 10px;
+    list-style:none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
 }
 
 #navLinks {
-	color: white;
-	text-decoration: none;
-	padding: 0.5rem 1rem;
+    color: white ;
+    text-decoration:none  ;
+    padding: 0.5rem 1rem ;
 }
 
-.navLinks:hover {
-	background-color: #6d76f7;
-	border-radius: 4px;
-	transition: all 0.2s ease-out;
+.navLinks:hover{
+    background-color: #6d76f7;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
 }
-.fa-bars {
-	color: white;
+.fa-bars{
+    color: white;
 }
-.navLinks-mobile {
-	display: none;
+.navLinks-mobile{
+    display:none;
 }
-.menuIcon {
-	display: none;
+.menuIcon{
+    display: none;
 }
