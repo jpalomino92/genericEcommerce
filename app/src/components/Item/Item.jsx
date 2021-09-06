@@ -1,8 +1,7 @@
-import React ,{useState,useContext}from 'react'; 
+import React ,{useState}from 'react'; 
 import { Link } from 'react-router-dom';
 import {Card} from 'semantic-ui-react';
 import ButtonCounter from '../buttonCounter/buttonCounter';
-import { CartContext } from '../../context/cartContext';
 
 
 
@@ -23,12 +22,14 @@ function Item({item}) {
 
         <div >
        
+            <Link to = {`/Products/${id}`} >
                 <Card
                     
                     image= {image}
                     header={title}
                     meta= {category}
                 />
+            </Link>
            
            
            <ButtonCounter  onAdd={onAdd} stock = {stock} initial={initial}/>

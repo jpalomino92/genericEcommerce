@@ -1,4 +1,4 @@
-import React ,{useState,useContext}from 'react'; 
+import React ,{useState}from 'react'; 
 import ButtonCounter from '../buttonCounter/buttonCounter';
 
 import ButtonCart from '../buttonGoToCart/buttonGoToCart';
@@ -11,10 +11,12 @@ export default function ItemDetail({OnlyItem}) {
     const  {image,title,description} = OnlyItem
 
     const [bought,setBought] = useState(false) 
-
+    let stock = 8
+    const initial = 1 
 
 
     const onAdd = (quantity) => {
+        console.log(quantity)
 
     } 
 
@@ -30,7 +32,7 @@ export default function ItemDetail({OnlyItem}) {
     ) : (
         extra = (
             <a>
-            <ButtonCounter  onAdd={onAdd}/>
+            <ButtonCounter  onAdd={onAdd} stock = {stock} initial={initial}/>
             </a>
         )
     )

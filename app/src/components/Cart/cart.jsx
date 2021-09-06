@@ -1,5 +1,4 @@
-import React ,{useState,}from 'react'; 
-import { CartContext } from '../../context/cartContext';
+import React ,{useState}from 'react'; 
 
 
 export default function Cart() {

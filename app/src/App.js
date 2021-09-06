@@ -17,7 +17,6 @@ import  ContactUs  from './Views/ContactUs/contactUs';
 import  ItemDetailView  from './Views/ItemDetailView/itemDetailView';
 import  Products  from './Views/Products/products';
 import  Services  from './Views/Services/services';
-import  CartProvider from './context/cartContext'
 import  Cart from './components/Cart/cart';
 
 
@@ -28,7 +27,6 @@ class App extends React.Component{
   render(){
     return (
       <Router>
-        <CartProvider>
 
           <NavBar />
 
@@ -60,7 +58,6 @@ class App extends React.Component{
 
           </Switch>
 
-        </CartProvider>
      
               
       </Router>
