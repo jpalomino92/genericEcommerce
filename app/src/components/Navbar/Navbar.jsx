@@ -1,21 +1,12 @@
-import React,{useState, useEffect } from 'react';
+import React from 'react';
 import './NavBar.css';
 import {MenuItems} from './MenuItems';
 import CartWidget from '../CartWidget/CartWidget';
 import NavBarDropDown from '../NarVarDropDown/NavBarDropDown';
-import { Link } from '@material-ui/core';
 
 
 function NavBar() {
 
-    const [items,setItems] = useState([]);
-
-
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=15')
-            .then(res=>res.json())
-            .then(items=>setItems(items))
-        },[]);
 
     const nav = ( <div className="dropdown-menu" aria-labelledby="navbarDropdown"> 
         <NavBarDropDown />    
@@ -38,7 +29,7 @@ function NavBar() {
                     {MenuItems.map((item,index)=> {
                         let navBarResult;
 
-                        if (index == "2" ) {
+                        if (index === 2 ) {
                             navBarResult =  <li key={index}  className={item.cName} > <a className="dropdown-toggle" href="#" id="navLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a> {nav} </li>
                         } else {
                             navBarResult = <li key={index}><a className={item.cName} id="navLinks" href= {item.url}>{item.title}</a></li>

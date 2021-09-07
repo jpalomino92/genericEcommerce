@@ -11,12 +11,14 @@ export default function ItemDetail({OnlyItem}) {
     const  {image,title,description} = OnlyItem
 
     const [bought,setBought] = useState(false) 
+    
     let stock = 8
     const initial = 1 
 
 
     const onAdd = (quantity) => {
         console.log(quantity)
+        setBought(true)
 
     } 
 

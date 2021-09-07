@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 ///import { Divider } from 'semantic-ui-react';
 import './App.css';
@@ -15,12 +14,10 @@ import NavBar from './components/NavBar/NavBar';
 import  Home  from './Views/Home/home';
 import  ContactUs  from './Views/ContactUs/contactUs';
 import  ItemDetailView  from './Views/ItemDetailView/itemDetailView';
-import  Products  from './Views/Products/products';
 import  Services  from './Views/Services/services';
 import  Cart from './components/Cart/cart';
 
 
-const head = "Generic Ecommerce";
 
 class App extends React.Component{
   
@@ -36,8 +33,8 @@ class App extends React.Component{
               <Home />
             </Route>
 
-            <Route path="/Services">
-            <h1>servicios</h1>
+            <Route path="/Services">.
+              <Services/>
             </Route>
 
             <Route path="/category/:categoryName">  
@@ -45,11 +42,11 @@ class App extends React.Component{
             </Route>
 
             <Route path="/Products/:id">      
-            <ItemDetailView />
+              <ItemDetailView />
             </Route>
 
             <Route path="/ContactUs">
-              <h1> Contact us </h1>
+              <ContactUs />
             </Route>
 
             <Route path="/Cart">
