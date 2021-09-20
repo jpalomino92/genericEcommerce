@@ -1,5 +1,6 @@
-import React ,{useState}from 'react'; 
+import React ,{useState,useContext}from 'react'; 
 import ButtonCounter from '../buttonCounter/buttonCounter';
+import { CartContext } from '../../context/cartContext';
 
 import ButtonCart from '../buttonGoToCart/buttonGoToCart';
 import './itemDetail.css'
@@ -10,17 +11,17 @@ export default function ItemDetail({OnlyItem}) {
     let extra = 0
     const  {image,title,description} = OnlyItem
 
-    const [bought,setBought] = useState(false) 
-    const [quantityBought, SetQuantityBought] = useState(0)
+    const [bought,setBought] = useState(false)
+    const {addItem} = useContext(CartContext)
+    const {cart} = useContext(CartContext)
     
     let stock = 8
     const initial = 1 
 
 
     const onAdd = (quantity) => {
-        SetQuantityBought(quantity)
-        setBought(true)
-
+        addItem(OnlyItem,quantity)
+        //setBought(true)
     } 
 
 
