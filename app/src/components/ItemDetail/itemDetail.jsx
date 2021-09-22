@@ -13,7 +13,6 @@ export default function ItemDetail({OnlyItem}) {
 
     const [bought,setBought] = useState(false)
     const {addItem} = useContext(CartContext)
-    const {cart} = useContext(CartContext)
     
     let stock = 8
     const initial = 1 
@@ -21,23 +20,24 @@ export default function ItemDetail({OnlyItem}) {
 
     const onAdd = (quantity) => {
         addItem(OnlyItem,quantity)
-        //setBought(true)
+        setBought(true)
     } 
 
-
-    {bought ? (
+    
+    {bought ? ( 
         extra = (
-            <a>
+            <div>
                 <ButtonCart />
             
-            </a>
+            </div>
         )
+        
 
     ) : (
         extra = (
-            <a>
+            <div>
             <ButtonCounter  onAdd={onAdd} stock = {stock} initial={initial}/>
-            </a>
+            </div>
         )
     )
     }
@@ -68,6 +68,3 @@ export default function ItemDetail({OnlyItem}) {
         </div>
     )
 }
-
-
-

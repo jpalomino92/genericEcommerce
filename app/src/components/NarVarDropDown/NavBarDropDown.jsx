@@ -18,7 +18,7 @@ export default function NavBarDropDown() {
 
                 return(
 
-                    <a className="dropdown-item" href={`/category/${categorys}`}>{categorys}</a> 
+                    <a key = {idx} className="dropdown-item" href={`/category/${categorys}`}>{categorys}</a> 
                     
 
                 )

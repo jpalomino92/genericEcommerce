@@ -26,46 +26,41 @@ class App extends React.Component{
   
   render(){
     return (
-      <Router>
-        <CartProvider>
+      <CartProvider>
+        <Router>
 
 
-          <NavBar />
+            <NavBar />
 
-          <Switch>
+            <Switch>
 
-            <Route exact path="/"> 
-              <Home />
-            </Route>
+              <Route exact path="/"> 
+                <Home />
+              </Route>
 
-            <Route path="/Services">.
-              <Services/>
-            </Route>
+              <Route path="/Services">.
+                <Services/>
+              </Route>
 
-            <Route path="/category/:categoryName">  
-              <Home />
-            </Route>
+              <Route path="/category/:categoryName">  
+                <Home />
+              </Route>
 
-            <Route path="/Products/:id">      
-              <ItemDetailView />
-            </Route>
+              <Route path="/Products/:id">      
+                <ItemDetailView />
+              </Route>
 
-            <Route path="/ContactUs">
-              <ContactUs />
-            </Route>
+              <Route path="/ContactUs">
+                <ContactUs />
+              </Route>
 
-            <Route path="/Cart">
-              <Cart />
-            </Route>
+              <Route path="/Cart">
+                <Cart />
+              </Route>
 
-          </Switch>
-
-          </CartProvider>
-
-
-     
-              
-      </Router>
+            </Switch>
+        </Router>
+      </CartProvider>
     
       );
   };

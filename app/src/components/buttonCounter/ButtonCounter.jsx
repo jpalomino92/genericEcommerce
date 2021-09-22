@@ -23,8 +23,6 @@ export default function ButtonCounter ({onAdd,stock,initial}) {
 
     if (parseInt(quantity) > 0) {
       setQuantity(quantity - 1);      
-    } else{
-      
     }
     
   };

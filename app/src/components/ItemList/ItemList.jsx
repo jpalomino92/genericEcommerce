@@ -16,13 +16,10 @@ import Item from '../Item/item';
 
                 return(
 
-                    <Grid.Column>
+                    <Grid.Column  key={idx}>
                         <Item 
                             item={item}
-                            key={idx}
                         />
-
-                        
                     </Grid.Column>
 
                 )

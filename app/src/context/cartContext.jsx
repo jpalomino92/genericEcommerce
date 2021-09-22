@@ -1,10 +1,8 @@
-import React, { createContext, useState,useEffect } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const CartContext = createContext()
 
 export default function CartProvider({children}) {
-
-
 
 
     const [cart,setCart] = useState([]);
@@ -19,17 +17,14 @@ export default function CartProvider({children}) {
 
             cart.splice(index, 1)
             setCart([...cart, { item, quantity: quantity + oldQy}])
-            console.log('existe')
         } else {
             setCart([...cart, {item, quantity}])
-            console.log('no existe')
         }
     }
-    console.log(cart)
 
       
 
-    const removeItem = (id) => setCart(cart.filter(item => item.id !== id));
+    const removeItem = (id) => setCart(cart.filter(item => item.item.id !== id));
 
     const clearCart = () => setCart([]);
 

@@ -30,14 +30,14 @@ function NavBar() {
                         let navBarResult;
 
                         if (index === 2 ) {
-                            navBarResult =  <li key={index}  className={item.cName} > <a className="dropdown-toggle" href="#" id="navLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a> {nav} </li>
+                            navBarResult =  <li className={item.cName} > <a className="dropdown-toggle" href="#" id="navLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a> {nav} </li>
                         } else {
-                            navBarResult = <li key={index}><a className={item.cName} id="navLinks" href= {item.url}>{item.title}</a></li>
+                            navBarResult = <li ><a className={item.cName} id="navLinks" href= {item.url}>{item.title}</a></li>
                         }
                     
                         return(
 
-                            <div>
+                            <div key = {index}>
                                 {navBarResult}
                             </div>
                                 
