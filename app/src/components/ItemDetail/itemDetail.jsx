@@ -24,23 +24,21 @@ export default function ItemDetail({OnlyItem}) {
     } 
 
     
-    {bought ? ( 
+    if(bought) { 
         extra = (
             <div>
                 <ButtonCart />
             
             </div>
         )
-        
-
-    ) : (
+    }else{
         extra = (
             <div>
             <ButtonCounter  onAdd={onAdd} stock = {stock} initial={initial}/>
             </div>
         )
-    )
     }
+    
   
     
 
@@ -48,7 +46,7 @@ export default function ItemDetail({OnlyItem}) {
 
         <div className="ItemGrid">
                <div className="imageContainer">
-                    <img src={image} className="itemDetailImage"/>
+                    <img src={image} alt="Product" className="itemDetailImage"/>
                 </div>
 
                 <div className="descriptionContainer">

@@ -11,7 +11,7 @@ export const ItemDetailContainer = ({id}) => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res=>res.json())
             .then(OnlyItem=>setOnlyItem(OnlyItem))
-      },[]);
+      },[id]);
 
     
 

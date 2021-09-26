@@ -10,7 +10,8 @@ export default function Cart() {
 
     let cartRender = 0
 
-    {cart ? (
+    if(cart.length){
+        
         cartRender = (
             <div>
                 {cart.map((item,index) => {
@@ -46,13 +47,13 @@ export default function Cart() {
                 })}
             </div>
         )
-    ):(
+    }else{
         cartRender = (
             <div>
                 <h1>vacio</h1>
             </div>
         )
-    )}
+    }
 
     return (
         <div>

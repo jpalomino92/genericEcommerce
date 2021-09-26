@@ -26,7 +26,7 @@ export const ItemListContainer = () => {
                 .then(items=>setItems(items))
         }
             
-      },[]);
+      },[categoryName]);
  
     return (
             <div id = 'ItemListContainer'>
