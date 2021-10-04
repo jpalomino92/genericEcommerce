@@ -22,9 +22,7 @@ import  CartProvider from './context/cartContext'
 
 
 
-class App extends React.Component{
-  
-  render(){
+function App() {
     return (
       <CartProvider>
         <Router>
@@ -63,7 +61,6 @@ class App extends React.Component{
       </CartProvider>
     
       );
-  };
 };
 
 export default App;

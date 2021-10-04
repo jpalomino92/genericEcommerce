@@ -46,7 +46,7 @@ export default function ItemDetail({OnlyItem}) {
 
         <div className="ItemGrid">
                <div className="imageContainer">
-                    <img src={image} alt="Product" className="itemDetailImage"/>
+                    <img src={image} alt={title} className="itemDetailImage"/>
                 </div>
 
                 <div className="descriptionContainer">
