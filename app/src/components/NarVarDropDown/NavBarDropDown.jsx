@@ -1,4 +1,6 @@
 import {React,useState, useEffect } from 'react';
+import getFirestore from '../../dbFirebase/getFirebase'
+
 
 
 export default function NavBarDropDown() {
@@ -6,9 +8,21 @@ export default function NavBarDropDown() {
     const [categorys,setCategorys] = useState([]);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(categorys=>setCategorys(categorys))
+
+        const db = getFirestore();
+        const categorysDB = []
+
+        db.collection("products").get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+            categorysDB.push(doc.data().category);
+        });
+        setCategorys(categorysDB)
+
+    
+});
+
+        
+
         },[]);
 
 
