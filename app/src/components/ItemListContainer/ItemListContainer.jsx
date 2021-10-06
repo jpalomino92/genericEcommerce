@@ -33,20 +33,6 @@ export const ItemListContainer = () => {
             setItems( data.docs.map(item => ( {id: item.id, ...item.data()} ) ) )                
         })  
 
-
-        /*
-        if (typeof categoryName != "undefined") {
-            fetch(`https://fakestoreapi.com/products/category/${categoryName}`)
-            .then(res=>res.json())
-            .then(items=>setItems(items))       
-        
-        } else {
-            fetch('https://fakestoreapi.com/products?limit=15')
-                .then(res=>res.json())
-                .then(items=>setItems(items))
-        }
-            */
-
       },[categoryName]);
 
  
