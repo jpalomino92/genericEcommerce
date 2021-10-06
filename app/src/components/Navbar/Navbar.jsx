@@ -1,4 +1,4 @@
-import React,{Link} from 'react';
+import React from 'react';
 import './NavBar.css';
 import {MenuItems} from './MenuItems';
 import CartWidget from '../CartWidget/CartWidget';
@@ -18,12 +18,10 @@ function NavBar() {
 
     return (
             <nav className="navBarItems">
-                <Link to="/">
-                    <a > 
-                        <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> Generic E-commerce</h1>
-                    </a>
                 
-                </Link>
+                <a href="/"> 
+                    <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> Generic E-commerce</h1>
+                </a>
                 <div className="menuIcon">
                     <i className='fas fa-times'></i>
                 </div>
