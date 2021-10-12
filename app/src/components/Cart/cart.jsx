@@ -18,6 +18,7 @@ import './cart.css'
         
         cartRender = (
             <>
+            <Grid container >
                 <Grid.Column>
                     <Table columns={6}>
                         <Table.Header>
@@ -67,6 +68,7 @@ import './cart.css'
 
                             )
                         })}
+
                         <Table.Footer>
                             <Table.Row>
                                 <Table.HeaderCell>Total</Table.HeaderCell>
@@ -80,25 +82,11 @@ import './cart.css'
                             </Table.Row>
                         </Table.Footer>
                     </Table>
-                </Grid.Column>  
-            </>
-        )
-    }else{
-        cartRender = (
-            <>
-                <h1>vacio</h1>
-            </>
-        )
-    }
+                </Grid.Column> 
 
-    return (
-        <div className='cartGrid'>
+            </Grid> 
 
-            <Grid container >
-                {cartRender}
-            </Grid>
-
-            <Grid container columns={3}>
+            <Grid container  columns={3}>
                 <Grid.Column>
                     <Button basic  color='red' onClick={()=>clearCart()}>
                         Vaciar Carrito
@@ -118,8 +106,35 @@ import './cart.css'
                         </Button>
                     </Link>
                 </Grid.Column>
-
             </Grid>
+            
+            </>
+        )
+    }else{
+        cartRender = (
+            <>
+            <Grid container>
+                <Grid.Column>
+                    <h1>El Carrito se encuentra vacio</h1>
+                    <Link to = '/'>
+                        <Button basic color='green'>
+                            Seguir comprando
+                        </Button>
+                    </Link>
+
+                </Grid.Column>
+            </Grid>
+            </>
+        )
+    }
+
+    
+    return (
+        <div className='cartGrid'>
+
+                {cartRender}
+
+
         </div>
     )
 }

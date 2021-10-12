@@ -8,6 +8,7 @@ export default function CartProvider({defaultValue = [],children}) {
 
     const [itemsTotales, setItemsTotales] = useState(0);
     const [precioTotal, setPrecioTotal] = useState(0);
+    
 
 
     useEffect(() => {
