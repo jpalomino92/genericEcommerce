@@ -29,15 +29,7 @@ export default function NavBar () {
                     </li>
                 </Link>
 
-                <Link to ={'/Services'}>
-                    <li className= 'navLinks' >
-                        <p className="navLinks" id="navLinks" role="button">
-                            Services
-                        </p>  
-                    </li>
-                </Link>
-
-                <NavDropdown title="Categorias" id="basic-nav-dropdown" className=" navLinks" id="navLinks">
+                <NavDropdown title="Categorias" id="basic-nav-dropdown" className=" navLinks">
          
                     <NavDropdown.Item as={Link} to="/category/ropa de hombre">Ropa de hombre</NavDropdown.Item>
                 
@@ -45,18 +37,6 @@ export default function NavBar () {
                 
                 </NavDropdown>
                 
-
-                
-           
-                
-
-                <Link to = {'/ContactUs'}>
-                    <li className= 'navLinks' >
-                        <p className="navLinks" id="navLinks">
-                            Contact Us
-                        </p>  
-                    </li>
-                </Link>
 
                 <CartWidget route= {`/Cart`}/>
 

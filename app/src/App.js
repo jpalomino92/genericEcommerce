@@ -3,14 +3,13 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import './App.css';
 //components
 import NavBar from './components/NavBar/NavBar';
+import  Cart from './components/Cart/cart';
+import CheckOut from './components/CheckOut/CheckOut'
 
 
 //Views
 import  Home  from './Views/Home/home';
-import  ContactUs  from './Views/ContactUs/contactUs';
 import  ItemDetailView  from './Views/ItemDetailView/itemDetailView';
-import  Services  from './Views/Services/services';
-import  Cart from './components/Cart/cart';
 //Context
 import  CartProvider from './context/cartContext'
 
@@ -27,10 +26,6 @@ function App() {
                 <Home />
               </Route>
 
-              <Route path="/Services">.
-                <Services/>
-              </Route>
-
               <Route path="/category/:categoryName">  
                 <Home />
               </Route>
@@ -39,12 +34,12 @@ function App() {
                 <ItemDetailView />
               </Route>
 
-              <Route path="/ContactUs">
-                <ContactUs />
-              </Route>
-
               <Route path="/Cart">
                 <Cart />
+              </Route>
+
+              <Route path="/CheckOut">
+                <CheckOut />
               </Route>
 
             </Switch>

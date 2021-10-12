@@ -1,10 +1,26 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState,useEffect } from 'react'
 
 export  const CartContext = createContext([])
 
 export default function CartProvider({defaultValue = [],children}) {
 
     const [cart,setCart] = useState(defaultValue);
+
+    const [itemsTotales, setItemsTotales] = useState(0);
+    const [precioTotal, setPrecioTotal] = useState(0);
+
+
+    useEffect(() => {
+        let precio = 0;
+        let itemTot = 0;
+        for (let cartItem of cart) {
+          
+          itemTot += cartItem.quantity;
+          precio += cartItem.quantity * cartItem.item.price;
+        }
+        setItemsTotales(itemTot);
+        setPrecioTotal(precio);
+      }, [cart]);
 
 
 
@@ -19,6 +35,22 @@ export default function CartProvider({defaultValue = [],children}) {
             setCart([...cart, { item, quantity: quantity + oldQy}])
         } else {
             setCart([...cart, {item, quantity}])
+        }
+        
+    }
+
+    function restItem(item){
+
+        const index = cart.findIndex(i => i.item.id === item.id)//
+
+        const newQy = cart[index].quantity - 1
+
+
+        cart.splice(index, 1)
+        setCart([...cart, { item, quantity: newQy}])
+
+        if (newQy === 0) {
+            removeItem(item.id)
         }
         
     }
@@ -38,7 +70,7 @@ export default function CartProvider({defaultValue = [],children}) {
 
 
     return (
-        <CartContext.Provider value={{cart,addItem,removeItem,clearCart}}>
+        <CartContext.Provider value={{cart,addItem,removeItem,clearCart,itemsTotales,precioTotal,restItem}}>
             {children}
         </CartContext.Provider>
     )

@@ -37,6 +37,12 @@
 	padding: 0.5rem 1rem;
 }
 
+#basic-nav-dropdown {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+}
+
 .navLinks:hover {
 	background-color: #6d76f7;
 	border-radius: 4px;
