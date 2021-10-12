@@ -31,10 +31,9 @@ function CheckOut() {
         .then((IdDocument) =>{
             setIdOrder(IdDocument.id)
         })
-        console.log('idOrder', idOrder);
-
 
         clearCart()
+
 
 
     }
@@ -55,7 +54,7 @@ function CheckOut() {
                             <label>Telefono</label>
                             <input placeholder='Phone' type='number' onChange={(e)=> setPhone(e.target.value)}/>
                         </Form.Field>
-                        <Button type='submit' >Submit</Button>
+                        <Button type='submit'>Submit</Button>
                 </Form>
 
                 {idOrder ? `Su orden de compra es el ${idOrder}` : null}
