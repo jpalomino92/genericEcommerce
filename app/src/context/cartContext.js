@@ -1,14 +1,15 @@
 import React, { createContext, useState } from 'react'
 
-export const CartContext = createContext([])
+export  const CartContext = createContext([])
 
 export default function CartProvider({defaultValue = [],children}) {
+
     const [cart,setCart] = useState(defaultValue);
 
 
+
     function addItem(item, quantity){
-        setCart([...cart,{item:item,quantity:quantity}])
-        /*
+
         const index = cart.findIndex(i => i.item.id === item.id)//
 
         if (index > -1) {
@@ -18,7 +19,7 @@ export default function CartProvider({defaultValue = [],children}) {
             setCart([...cart, { item, quantity: quantity + oldQy}])
         } else {
             setCart([...cart, {item, quantity}])
-        }*/
+        }
         
     }
 
@@ -42,4 +43,6 @@ export default function CartProvider({defaultValue = [],children}) {
         </CartContext.Provider>
     )
 }
+
+
 

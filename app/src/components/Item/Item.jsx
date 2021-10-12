@@ -5,7 +5,7 @@ import ButtonCounter from '../buttonCounter/buttonCounter';
 
 
 
-function Item({item}) {
+const  Item = ({item}) => {
 
     const  {image,title,category,id} = item
     let stock = 8

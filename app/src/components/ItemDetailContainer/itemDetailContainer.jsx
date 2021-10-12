@@ -3,7 +3,7 @@ import ItemDetail from '../ItemDetail/itemDetail';
 import getFirestore from '../../dbFirebase/getFirebase'
 
 
-export const ItemDetailContainer = ({id}) => {
+const ItemDetailContainer = ({id}) => {
 
     const [OnlyItem,setOnlyItem] = useState([])
 

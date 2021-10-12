@@ -6,7 +6,7 @@ import ButtonCart from '../buttonGoToCart/buttonGoToCart';
 import './itemDetail.css'
 
 
-export default function ItemDetail({OnlyItem}) {
+const  ItemDetail = ({OnlyItem}) => {
     
     let extra = 0
     const  {image,title,description} = OnlyItem
@@ -66,3 +66,5 @@ export default function ItemDetail({OnlyItem}) {
         </div>
     )
 }
+
+export default ItemDetail

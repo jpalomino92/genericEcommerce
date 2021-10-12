@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-///import { Divider } from 'semantic-ui-react';
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import './App.css';
 //components
 import NavBar from './components/NavBar/NavBar';
@@ -26,12 +21,8 @@ function App() {
     return (
       <CartProvider>
         <Router>
-
-
             <NavBar />
-
             <Switch>
-
               <Route exact path="/"> 
                 <Home />
               </Route>

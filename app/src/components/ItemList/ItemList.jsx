@@ -6,7 +6,7 @@ import Item from '../Item/item';
 
 
   
-  export default function ItemList ({items}) {
+ const ItemList = ({items}) => {
             
     return(
         
@@ -33,5 +33,7 @@ import Item from '../Item/item';
         </div>
     )
   }
+
+  export default ItemList
 
 

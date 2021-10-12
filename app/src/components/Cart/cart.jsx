@@ -4,7 +4,7 @@ import { Button, Card, CardGroup, Image } from 'semantic-ui-react'
 
 
 
-export default function Cart() {
+ const  Cart = () => {
 
     const {cart,addItem,removeItem} = useContext(CartContext)
 
@@ -68,3 +68,4 @@ export default function Cart() {
 
 
 
+export default Cart

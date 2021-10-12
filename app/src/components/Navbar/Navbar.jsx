@@ -1,58 +1,69 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
-import {MenuItems} from './MenuItems';
 import CartWidget from '../CartWidget/CartWidget';
-import NavBarDropDown from '../NarVarDropDown/NavBarDropDown';
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 
-function NavBar() {
 
-
-    const nav = ( <div className="dropdown-menu" aria-labelledby="navbarDropdown"> 
-        <NavBarDropDown />    
-    </div>
-    
-    )
-
-
+export default function NavBar () {
 
     return (
-            <nav className="navBarItems">
+        <div className="navBarItems">
+            
+            <Link to ={"/"}>
+                <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> Generic E-commerce</h1>
+            </Link>
                 
-                <a href="/"> 
-                    <h1 className="navBarLogo"><i className="fas fa-biohazard"></i> Generic E-commerce</h1>
-                </a>
-                <div className="menuIcon">
-                    <i className='fas fa-times'></i>
-                </div>
-                
-                <ul className= 'nav-menu'>
-                    {MenuItems.map((item,index)=> {
-                        let navBarResult;
+            <div className="menuIcon">
+                <i className='fas fa-times'></i>
+            </div>
+            
+            <ul className= 'nav-menu'>
 
-                        if (index === 2 ) {
-                            navBarResult =  <li className={item.cName} > <a className="dropdown-toggle" href="/#" id="navLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a> {nav} </li>
-                        } else {
-                            navBarResult = <li ><a className={item.cName} id="navLinks" href= {item.url}>{item.title}</a></li>
-                        }
-                    
-                        return(
+                <Link to ={'/'}>
+                    <li className= 'navLinks' >
+                        <p className="navLinks" id="navLinks" role="button" >
+                            Home
+                        </p>  
+                    </li>
+                </Link>
 
-                            <div key = {index}>
-                                {navBarResult}
-                            </div>
-                                
-                        )
-                    })}
-                    
-                    <CartWidget route= {`/Cart`}/>
+                <Link to ={'/Services'}>
+                    <li className= 'navLinks' >
+                        <p className="navLinks" id="navLinks" role="button">
+                            Services
+                        </p>  
+                    </li>
+                </Link>
 
-                </ul>
+                <NavDropdown title="Categorias" id="basic-nav-dropdown" className=" navLinks" id="navLinks">
+         
+                    <NavDropdown.Item as={Link} to="/category/ropa de hombre">Ropa de hombre</NavDropdown.Item>
                 
+                    <NavDropdown.Item as={Link} to={'/category/mochilas'}>Mochila</NavDropdown.Item>
                 
-            </nav>
-    )
+                </NavDropdown>
+                
+
+                
+           
+                
+
+                <Link to = {'/ContactUs'}>
+                    <li className= 'navLinks' >
+                        <p className="navLinks" id="navLinks">
+                            Contact Us
+                        </p>  
+                    </li>
+                </Link>
+
+                <CartWidget route= {`/Cart`}/>
+
+            </ul>
+        </div>
+    );
      
 }
 
-export default NavBar 
+  

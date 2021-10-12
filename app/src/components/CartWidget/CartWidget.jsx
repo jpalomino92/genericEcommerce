@@ -1,13 +1,16 @@
 import React from 'react' 
 import "./CartWidget.css"
+import { Link } from 'react-router-dom'
 
 
-export default function CartWidget({route}) {
+ const  CartWidget = ({route}) => {
     return (
         <div>
-            <a href= {route}>
-            <i className="fas fa-shopping-cart"></i>
-            </a>
+            <Link to={route} >
+                <i className="fas fa-shopping-cart"></i>
+            </Link>
         </div>
     )
 }
+
+export default CartWidget

@@ -5,7 +5,7 @@ import './buttonCounter.css'
 
 
 
-export default function ButtonCounter ({onAdd,stock,initial}) {
+const  ButtonCounter = ({onAdd,stock,initial}) => {
 
   const [quantity,setQuantity] = useState(initial);
 
@@ -47,6 +47,7 @@ export default function ButtonCounter ({onAdd,stock,initial}) {
     </div>
   )
 }
+export default ButtonCounter
 
 
 
